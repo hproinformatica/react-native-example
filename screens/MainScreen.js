@@ -17,8 +17,8 @@ export default class MainScreen extends React.Component {
         super(props);
     }
 
-    _onAuthButtonPress = () => {
-        this.props.navigation.navigate('ExampleScreen');
+    _onButtonPress = () => {
+        this.props.navigation.navigate('DefaultComponentsScreen');
     }
 
     render() {
@@ -27,17 +27,13 @@ export default class MainScreen extends React.Component {
                 style={styles.container}
             >
                 <View style={styles.logoContainer}>
-                    <Image source={require('../../assets/images/logo.png')} resizeMode="contain" style={styles.logo} />
+                    <Image source={require('../assets/images/logo.png')} resizeMode="contain" style={styles.logo} />
                 </View>
                 <View style={styles.inputContainer}>
                     <Button
-                        mode="contained"
-                        icon="person"
-                        onPress={this._onAuthButtonPress}
-                        style={styles.authButtonStyle}
-                    >
-                        Acessar aplicativo
-                    </Button>
+                        title="Acessar aplicativo"
+                        onPress={this._onButtonPress}
+                    />
                 </View>
             </View>
         );
@@ -59,10 +55,5 @@ const styles = StyleSheet.create({
     },
     inputContainer: {
         flexGrow: 1,
-    },
-    authButtonStyle: {
-        marginTop: 10,
-        marginLeft: 5,
-        marginRight: 5,
     },
 });

@@ -1,15 +1,19 @@
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 
-import Main from '../screens/MainScreen';
+import MainScreen from '../screens/MainScreen';
+import DefaultComponentsScreen from '../screens/DefaultComponentsScreen';
+import RNPaperScreen from '../screens/RNPaperScreen';
 
-const Stack = createStackNavigator( 
+const AppNavigator = createStackNavigator( 
     {
         MainScreen: MainScreen,
+        DefaultComponentsScreen: DefaultComponentsScreen,
+        RNPaperScreen: RNPaperScreen,
     },
     {
         initialRouteName: 'MainScreen',
     }
 );
 
-export default Stack;
+export default AppNavigator;
