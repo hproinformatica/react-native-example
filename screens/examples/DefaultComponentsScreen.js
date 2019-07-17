@@ -12,7 +12,8 @@ export default class DefaultComponentsScreen extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            title: 'Componentes Padrão'
+            title: 'Componentes Padrão',
+            gesturesEnabled: false,
         }
     }
 

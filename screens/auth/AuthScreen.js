@@ -7,7 +7,7 @@ import {
     View,
 } from 'react-native';
 
-export default class MainScreen extends React.Component {
+export default class AuthScreen extends React.Component {
 
     static navigationOptions = {
         header: null,
@@ -18,7 +18,7 @@ export default class MainScreen extends React.Component {
     }
 
     _onButtonPress = () => {
-        this.props.navigation.navigate('DefaultComponentsScreen');
+        this.props.navigation.navigate('DrawerNavigator');
     }
 
     render() {
@@ -27,7 +27,7 @@ export default class MainScreen extends React.Component {
                 style={styles.container}
             >
                 <View style={styles.logoContainer}>
-                    <Image source={require('../assets/images/logo.png')} resizeMode="contain" style={styles.logo} />
+                    <Image source={require('../../assets/images/logo.png')} resizeMode="contain" style={styles.logo} />
                 </View>
                 <View style={styles.inputContainer}>
                     <Button

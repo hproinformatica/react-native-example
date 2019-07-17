@@ -13,7 +13,7 @@ export default class RNPaperScreen extends React.Component {
                     <Appbar.Action icon="done" onPress={navigation.getParam('onSaveButtonPress')} />
                 </Appbar.Header>
             ),
-            // gesturesEnabled: false,
+            gesturesEnabled: false,
         }
     }
 
@@ -50,7 +50,7 @@ export default class RNPaperScreen extends React.Component {
         return leftValue + rightValue;
     }
 
-    _exercise = () => {
+    _task = () => {
         const a = [1, 2, 3, 4];
 
         const mapResult = a.map(this._double);
@@ -106,8 +106,8 @@ export default class RNPaperScreen extends React.Component {
                 <Button
                     icon="videogame-asset"
                     mode="contained"
-                    // onPress={() => this.exercise()}
-                    onPress={this._exercise}
+                    // onPress={() => this.task()}
+                    onPress={this._task}
                     style={styles.button}
                 >
                     Mostrar resposta do exercício!
