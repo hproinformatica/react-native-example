@@ -38,6 +38,31 @@ export default class RNPaperScreen extends React.Component {
         Alert.alert('Sucesso', 'Você apertou o botão de Gravar com sucesso!');
     }
 
+    _double = value => {
+        return value * 2;
+    }
+
+    _isOdd = value => {
+        return (value % 2) === 1;
+    }
+
+    _sum = (leftValue, rightValue) => {
+        return leftValue + rightValue;
+    }
+
+    _exercise = () => {
+        const a = [1, 2, 3, 4];
+
+        const mapResult = a.map(this._double);
+        const filterResult = a.filter(this._isOdd);
+        const reduceResult = a.reduce(this._sum);
+
+        Alert.alert(
+            'Resultado do exercício',
+            `map: ${mapResult} | filter: ${filterResult} | reduce: ${reduceResult}`
+        );
+    }
+
     render() {
         return (
             <ScrollView style={styles.container}>
@@ -77,6 +102,15 @@ export default class RNPaperScreen extends React.Component {
                     style={styles.button}
                 >
                     Ícone e "Text"
+                </Button>
+                <Button
+                    icon="videogame-asset"
+                    mode="contained"
+                    // onPress={() => this.exercise()}
+                    onPress={this._exercise}
+                    style={styles.button}
+                >
+                    Mostrar resposta do exercício!
                 </Button>
             </ScrollView>
         );
